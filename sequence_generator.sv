@@ -1,6 +1,6 @@
 module sequence_generator(
     input logic [2:0] index,
-    output logic [8:0] sequence
+    output logic [7:0] seq_out
 );
 
 logic [7:0] sequences[0:7];
@@ -14,6 +14,6 @@ assign sequences[5] = 8'b10111000;
 assign sequences[6] = 8'b10111011;
 assign sequences[7] = 8'b10111110;
 
-assign sequence = sequences[index];
+assign seq_out = sequences[index];
 
-endmodule;
+endmodule
